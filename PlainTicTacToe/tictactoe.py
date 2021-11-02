@@ -17,7 +17,15 @@ position_board = [
     [7, 8, 9]
 ]
 
-# Print board
+# Print board 
+def print_board(board):
+    for row in board:
+        for cell in row:
+            print(f'| {cell} |', end='')
+        print()
+
+print_board(position_board)
+print_board(playing_board)
 
 # Ask User for X or or
 
