@@ -5,9 +5,19 @@
 
 '''
 # New Game Board Creation
-
+playing_board = [
+    ['-', '-', '-'],
+    ['-', '-', '-'],
+    ['-', '-', '-']
+]
 # Board User Sees
+position_board = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
 
+# Print board
 
 # Ask User for X or or
 
