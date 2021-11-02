@@ -27,7 +27,20 @@ def print_board(board):
 print_board(position_board)
 print_board(playing_board)
 
-# Ask User for X or or
+#Possible player options
+tokens = ['X', 'O']
+
+# Ask User for X or O
+
+
+def player_choice(user_token = '',tokens = tokens):
+    user_token = input('Would you like to be X or O? ')
+    if user_token not in tokens:
+        print('Please choose a valid response: X or O ')
+        return player_choice(user_token)
+    else: return print(f'You are {user_token}\'s.')
+
+player_choice()
 
 # Generate random number from 1 - 10 for a target then for computer guess 
 #    ask user to guess. closest to number goes first(abs(player - target), abs(comp - target))
