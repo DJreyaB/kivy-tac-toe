@@ -64,9 +64,6 @@ def place_token(user_position = user_position):
 place_token(user_position)
 
 
-
-# verify that the users choice is in the set before accepting placement
-
 # Computers placement is determined by random number generator of possible values 
 
 # After set of available places is less than 5 begin checking for winners 
@@ -75,3 +72,10 @@ place_token(user_position)
 #   If no winner is found and available spaces len > 0 
 #       continue 
 #   otherwise cats game
+
+
+def main():
+    new_game = input('Would you like to play Tic-Tac-Toe? Y/N ')
+    print_board()
+    player_choice()
+    place_token()
