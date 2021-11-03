@@ -38,14 +38,33 @@ def player_choice(user_token = '',tokens = tokens):
     if user_token not in tokens:
         print('Please choose a valid response: X or O ')
         return player_choice(user_token)
-    else: return print(f'You are {user_token}\'s.')
+    else: return user_token
 
-player_choice()
+user_token = player_choice()
+print(f'You are {user_token}\'s.')
 
 # Generate random number from 1 - 10 for a target then for computer guess 
 #    ask user to guess. closest to number goes first(abs(player - target), abs(comp - target))
 
-# Keep a set of 1 -9 for available spaces and pop off spaces as they're occupied, 
+# Keep a set of 1 -9 for available spaces
+positions = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+user_position = int(input(f'Choose the location number to place your {user_token} . '))
+
+# pop off spaces as they're occupied, 
+def place_token(user_position = user_position):
+    if user_position in positions:
+        positions.discard(user_position)
+        print(f'You placed an {user_token} in {user_position}.')
+    else:
+        print_board(playing_board)
+        print_board(position_board)
+        user_position = input('Please choose a valid position.')
+        place_token()
+
+place_token(user_position)
+
+
+
 # verify that the users choice is in the set before accepting placement
 
 # Computers placement is determined by random number generator of possible values 
