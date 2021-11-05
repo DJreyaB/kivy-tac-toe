@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/plaintictactoe/__init__.py
+src/plaintictactoe/tictactoe.py
+src/plaintictactoe.egg-info/PKG-INFO
+src/plaintictactoe.egg-info/SOURCES.txt
+src/plaintictactoe.egg-info/dependency_links.txt
+src/plaintictactoe.egg-info/not-zip-safe
+src/plaintictactoe.egg-info/requires.txt
+src/plaintictactoe.egg-info/top_level.txt
+test/test_tictactoe.py
